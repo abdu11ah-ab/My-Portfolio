@@ -4,7 +4,9 @@ import { IoCopyOutline } from "react-icons/io5";
 import { MdSportsCricket, MdSportsGymnastics } from "react-icons/md";
 
 // Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+
 
 import { cn } from "@/utils/cn";
 
